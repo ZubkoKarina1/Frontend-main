@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&display=swap" rel="stylesheet">
+ <title>Website</title>
+ <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
+ <style>
+ body {font-family: Arial, sans-serif;
+ margin: 20px;
+ padding: 20px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ background-color: azure;}
+ h1 {color: #333;}
+ p {line-height: 1.6;}
+ </style>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header_wrapper">
+                <div class="wrapepr_logo">
+                    <a href="/" class="wrapper_logo-link">
+                        <img src="./image/Логотип_ЗНУ.png" alt="logo" class="wrapper_logo-pic">
+                    </a>
+                </div>
+                <nav class="header_nav">
+                    <ul class="header_list-menu">
+                        <li class="header_item">
+                            <a href="./Index2.html" class="header_link">Головна</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="./news.html" class="header_link">Новини</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="./education.html" class="header_link">Навчання</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="./contacs.html" class="header_link">Контакти</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+  <main>
+    <h1>Зворотній зв'язок</h1>
+    <p>На цій сторінці представлена форма для зворотнього зв'язку, де Ви можете зконтактувати з деканатом нашого факультету. Протягом дня 
+        після заповнення форми з Вами зв'яжуться
+    </p>
+    <form>
+        Ім’я:<br>
+        <input type='text' name='firstname' value="Іван"><br>
+        Прізвище:<br>
+        <input type='text' name='lastname' value="Іванов"><br>
+        Номер телефону:<br>
+        <input type='tel' name='phone' value="+380xxxxxxxxx"><br>
+        <textarea name="message" rows="10" cols="30">
+Напишіть Ваше питання або побажання.
+        </textarea><br>
+        <input type="submit" value="Надіслати">
+        <input type="reset" value="Скинути">
+    </form>
+  </main>
+<footer>
+    <p style="font-size: 12px;"> © Автор сайту: Зубко Карина, 7.F1.25
+    </p>
+<p style="font-size: 12px;">2025</p>
+        
+</footer>
+</body>
+</html>
