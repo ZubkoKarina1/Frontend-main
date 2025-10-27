@@ -1,0 +1,214 @@
+:root {
+  --color-primary: #000a1a;     /* основний колір (наприклад, для заголовків) */
+  --color-secondary: #4dfcff;   /* другорядний (для кнопок або елементів) */
+  --color-accent: 	#2c2cfd;      /* акцент (посилання, hover-ефекти) */
+  --color-bg: #cce0ff;          /* фон */
+  --color-text: #001219;        /* текст */
+  @font-face {
+    font-family: 'Playfair_Display', 'Bebas_Neue';
+    src: url(../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf), url(../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+  }
+}
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+   display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 10% 1fr; /* ліворуч сайдбар */
+  grid-template-rows: auto 1fr auto; /* зверху header, внизу footer */
+  min-height: 100vh;
+  gap: 20px 20px;
+}
+
+h1 {
+  grid-area: content;
+  color: var(--color-primary);
+}
+
+a:hover {
+  grid-area: content;
+  color: var(--color-secondary);
+}
+
+.header {
+  grid-area: header;
+  background-color: var(--color-accent);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.header_nav {
+  background-color: var(--color-accent);
+  height: 60px;
+  width: 100%;
+}
+
+.header_wrapper {
+  display: flex;
+  align-items: center; 
+  justify-content:first baseline;
+  gap: 30px;
+}
+
+.wrapper_logo-pic {
+  height: 60px;
+  width: auto;
+}
+
+.header_list-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content:space-evenly;
+  align-items:center;
+  gap: 30px;
+  padding-top: 15px;
+}
+
+.header_link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header_link:hover {
+  color: var(--color-secondary);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #bcd4ff;
+  padding: 20px;
+  box-shadow: inset -2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar_nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar_item {
+  margin-bottom: 10px;
+}
+
+.sidebar_item a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sidebar_item a:hover {
+  color: var(--color-accent);
+}
+
+/* === КОНТЕНТ === */
+.content {
+  grid-area: content;
+  padding: 30px;
+  line-height: 1.6;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.content_title {
+  font-family: 'Bebas_Neue', sans-serif;
+  font-size: 36px;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.content_figure {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--color-accent);
+  color: white;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #444;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* === ФОРМИ === */
+input, textarea {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: 'Playfair_Display';
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type=submit] {
+  background-color: #41c021;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #36a71b;
+}
+input[type=reset]{
+  border: none;
+  cursor: pointer
+}
+input[type=reset]:hover {
+  background-color: #d8ecd3;
+}
+
+/* === АДАПТИВНІСТЬ === */
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  .header_list-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar {
+    text-align: center;
+    border-top: 2px solid var(--color-accent);
+  }
+}
