@@ -1,0 +1,27 @@
+.sidebar {
+  grid-area: sidebar;
+  background-color: #bcd4ff;
+  padding: 1%;
+  box-shadow: inset 1% 0 4% rgba(0, 0, 0, 0.1);
+}
+
+.sidebar_nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar_item {
+  margin-bottom: 10px;
+}
+
+.sidebar_item a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sidebar_item a:hover {
+  color: var(--color-accent);
+}
