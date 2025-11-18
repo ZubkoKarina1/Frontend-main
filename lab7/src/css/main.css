@@ -1,0 +1,32 @@
+/* Скидання базових відступів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Оформлення всього сайту */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0c1ff;
+  color: #333;
+  padding: 40px;
+  line-height: 1.6;
+}
+
+/* Заголовок */
+h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+/* Основний текст */
+p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: justify;
+}
